@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Sans:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .head_op {
+        width: 100%;
+        height: 6rem;
+        /* background-color: #2018a6; */
+        background-image: linear-gradient(90deg, black 0%, #082e73 20%);
+        color: #ffffff;
+        box-shadow: 0.1rem 0.1rem 1rem 0.01rem #7788a6;
+    }
+
+    .head_name h1 {
+        margin: 0%;
+    }
+
+    .head_name {
+        height: 5.2rem;
+        width: 25rem;
+        font-size: 2rem;
+        margin-left: 5%;
+        position: absolute;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0.4rem 0.2rem 0.1rem 0.1rem #4e6a9c;
+    }
+
+    .main_con_10 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .vote_sys {
+        margin-top: 5rem;
+        height: auto;
+        width: 60rem;
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 0.1rem 0.3rem 0.7rem 0.01rem #cdcdcd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2.5rem;
+    }
+
+    .link_shower {
+        height: auto;
+        width: 34rem;
+        font-size: 1.5rem;
+        border: 0.1rem solid #e2e2e2;
+        overflow-wrap: anywhere;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+    }
+
+    .vote_st10,
+    .back_st {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        font-family: 'PT Sans', sans-serif;
+        color: #7d7d7d;
+    }
+
+    .rec_op {
+        font-size: 1.5rem;
+        overflow-wrap: anywhere;
+        width: 32rem;
+        height: 4rem;
+        border-radius: 1rem;
+        background-color: #eaecff;
+        font-family: 'PT Sans', sans-serif;
+        padding: 0.5rem 2rem;
+        color: #7d7d7d;
+        transition: height 0.5s;
+        overflow: auto;
+        scrollbar-width: none;
+        margin-top: 1rem;
+    }
+
+    .rec_op::-webkit-scrollbar {
+        display: none;
+    }
+
+    .span_op {
+        color: #384762;
+        font-size: 1.7rem;
+        margin-left: 1rem;
+        text-transform: capitalize;
+        margin-right: 1rem;
+    }
+
+    .vote_head {
+        font-size: 2rem;
+        color: #244175;
+        margin: 1rem 0rem 0rem 0rem;
+        border-bottom: 0.05rem solid #b9b9b9;
+    }
+
+    .hida_op_10 {
+        display: block;
+    }
+
+    .data_vote {
+        margin: 1rem 0;
+    }
+
+    a {
+        color: #227aff;
+    }
+
+    @media only screen and (max-width: 620px) {
+        .vote_sys {
+            width: 45rem;
+        }
+    }
+
+    @media only screen and (max-width: 460px) {
+        .vote_sys {
+            width: 100%;
+        }
+
+        .head_name {
+            margin-left: 0%;
+        }
+    }
+
+    @media only screen and (max-width: 370px) {
+        .rec_op {
+            width: 80%;
+        }
+    }
+</style>
+
+<body onload="da_10({{'vote_records'}})">
+    <div class="head_op">
+        <div class="head_name">
+            <h1><span style="color: red;">VAR</span>tworld</h1>
+        </div>
+    </div>
+
+    <div class="main_con_10">
+
+        <div class="vote_sys">
+            <h1 style="font-size: 3rem;font-family: 'PT Sans', sans-serif;color: #4b6aa2;">Voting Records
+            </h1>
+        </div>
+
+    </div>
+    <script>
+        let height_op_1 = [];
+        const da_10 = (vote_records) => {
+            if (vote_records.length > 1) {
+                console.log(vote_records)
+                for (let i = 1; i < vote_records.length; i++) {
+                    let set_struct_pp = ` <div onmouseover="show_pp(${i - 1})" onmouseout="hide_pp(${i - 1})"  class="rec_op">
+                <div class="vote_head">
+                    <p style="margin: 0.8rem 0;">${vote_records[i].vote_system_name}</p>
+                </div>
+                <div class="hida_op_10">
+                    <p class="data_vote"><span class="span_op">Total Candidates</span> ${vote_records[i].total_candidate}</p>
+                    <div class="cad_names_op" style="margin: 0;padding:0;">
+                    </div>
+                    <p class="data_vote"><span class="span_op">voting start time</span> ${vote_records[i].vote_start_time}</p>
+                    <p class="data_vote"><span class="span_op">votint end time</span> ${vote_records[i].vote_end_time}</p>  
+                    <div class="data_vote"><span class="span_op">Voting URL</span>
+                        <a href="${vote_records[i].meet_url}" target="_blank">${vote_records[i].meet_url}</a>
+                    </div>
+                </div>
+            </div>`;
+                    document.getElementsByClassName("vote_sys")[0].insertAdjacentHTML('beforeend', set_struct_pp);
+                    for (let ii = 0; ii < vote_records[i].candidate_data.length; ii++) {
+                        let ss_data = `<p class="data_vote"><span class="span_op">candidate ${vote_records[i].candidate_data[ii].name_candidate}</span>${vote_records[i].candidate_data[ii].votes}</p>`;
+                        document.getElementsByClassName("cad_names_op")[i - 1].insertAdjacentHTML('beforeend', ss_data)
+                    }
+                    height_op_1.push(document.getElementsByClassName("rec_op")[i - 1].scrollHeight)
+                }
+            }
+            else {
+                let pp = document.getElementsByClassName("vote_sys")[0].children;
+                pp[0].innerHTML = "There Are Not Voting Records"
+            }
+        }
+
+        const show_pp = (i) => {
+            document.getElementsByClassName("hida_op_10")[i].style.display = "block";
+            let pp_10 = document.getElementsByClassName("rec_op")[i];
+            pp_10.style.height = height_op_1[i] / 10 + "rem";
+        }
+
+        const hide_pp = (i) => {
+            let pp_10 = document.getElementsByClassName("rec_op")[i];
+            pp_10.style.height = "4rem";
+        }
+
+    </script>
+</body>
+
+</html>

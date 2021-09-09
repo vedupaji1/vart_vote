@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Give Vote</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head><style>html {
+ font-size: 62.5%;
+ }
+
+ body {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ background-color: #f9f9ff;
+ }
+
+ .head_op {
+ width: 100%;
+ height: 6rem;
+ /* background-color: #2018a6; */
+ background-image: linear-gradient(90deg, black 0%, #082e73 20%);
+ color: #ffffff;
+ /*box-shadow: 0.1rem 0.1rem 1rem 0.01rem #7788a6;*/
+ }
+
+ .head_name h1 {
+ margin: 0%;
+ }
+
+ .head_name {
+ height: 5.2rem;
+ width: 25rem;
+ font-size: 2rem;
+ margin-left: 5%;
+ position: absolute;
+ border-radius: 2rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ box-shadow: 0.4rem 0.2rem 0.1rem 0.1rem #4e6a9c;
+ }
+
+ .main_con_10 {
+ display: flex;
+ justify-content: center;
+ }
+
+ .vote_sys {
+ margin-top: 5rem;
+ height: auto;
+ width: 60rem;
+ background-color: #ffffff;
+ border-radius: 0.5rem;
+ box-shadow: 0.1rem 0.3rem 0.7rem 0.01rem #cdcdcd;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ .link_shower {
+ height: auto;
+ width: 34rem;
+ font-size: 1.5rem;
+ border: 0.1rem solid #e2e2e2;
+ overflow-wrap: anywhere;
+ padding: 1rem 1.5rem;
+ margin-bottom: 2rem;
+ border-radius: 1rem;
+ }
+
+ .vote_st10,
+ .back_st {
+ font-size: 1.5rem;
+ margin-top: 1.5rem;
+ font-family: 'PT Sans', sans-serif;
+ color: #7d7d7d;
+ }
+
+ .voting_time {
+ font-size: 1.5rem;
+ margin-bottom: 2rem;
+ }
+
+ .back_st {
+ font-size: 1.7rem;
+ /* margin-top: 1.5rem; */
+ font-family: 'PT Sans', sans-serif;
+ color: #7d7d7d;
+ margin-right: 0.8rem;
+ }
+
+ .vote_st_10 {
+ margin-top: 0.5rem;
+ }
+
+ .line_op {
+ width: 100%;
+ height: 0.01rem;
+ background-color: #e2e2e2;
+ margin: 0rem;
+ margin-bottom: 2rem;
+ box-shadow: 0.1rem 0.1rem 2rem 0.01rem #cdcdcd;
+ display: none;
+ }
+
+ .svg_op {
+ height: auto;
+ width: 100%;
+ overflow: hidden;
+ position: absolute;
+ z-index: -1;
+ margin-top: -0.1rem;
+ }
+
+ .sv_ima {
+ transform: scale(1, -1);
+ width: 110%;
+ }
+
+ @media only screen and (max-width: 620px) {
+ .vote_sys {
+ width: 45rem;
+ }
+
+ .head_name {
+ font-size: 1.5rem;
+ margin-left: 0%;
+ }
+ }
+
+ @media only screen and (max-width: 460px) {
+ .vote_sys {
+ width: 100%;
+ }
+
+ .sv_ima {
+ width: 250%;
+ }
+ }</style><body><div class="head_op"><div class="head_name"><h1><span style="color: red">VAR</span>tworld</h1></div></div><div class="svg_op"><svg id="wave" class="sv_ima" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(8, 46, 115, 1)" offset="0%"></stop><stop stop-color="rgba(4.042, 21.356, 52.793, 1)" offset="100%"></stop></linearGradient></defs><!--0 0 1440 490--><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L60,24.5C120,49,240,98,360,122.5C480,147,600,147,720,179.7C840,212,960,278,1080,326.7C1200,376,1320,408,1440,416.5C1560,425,1680,408,1800,375.7C1920,343,2040,294,2160,261.3C2280,229,2400,212,2520,179.7C2640,147,2760,98,2880,130.7C3000,163,3120,278,3240,302.2C3360,327,3480,261,3600,220.5C3720,180,3840,163,3960,163.3C4080,163,4200,180,4320,179.7C4440,180,4560,163,4680,155.2C4800,147,4920,147,5040,163.3C5160,180,5280,212,5400,212.3C5520,212,5640,180,5760,163.3C5880,147,6000,147,6120,130.7C6240,114,6360,82,6480,114.3C6600,147,6720,245,6840,277.7C6960,310,7080,278,7200,285.8C7320,294,7440,343,7560,367.5C7680,392,7800,392,7920,367.5C8040,343,8160,294,8280,261.3C8400,229,8520,212,8580,204.2L8640,196L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path></svg></div><div class="main_con_10"><div class="vote_sys"><h1 style="font-size: 3rem;font-family: 'PT Sans', sans-serif;color: #4b6aa2">{{mess_10}}</h1><div class="line_op"></div><div class="voting_time"><div class="vote_st_10"><span class="back_st">Voting Start</span> {{vote_start_10}}</div><div class="vote_st_10"><span class="back_st">Voting End</span> {{vote_end_10}}</div></div></div></div><script>//Hi Viewer</script></body></html>

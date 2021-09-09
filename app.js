@@ -267,7 +267,7 @@ app.post('/main_dashboard', (req, res) => {
                         }
                         all_caddi_data.push(cadd_data_obj);
                     }
-                    let url = new URL("http://localhost/give_vote");
+                    let url = new URL("https://vartvote.herokuapp.com/give_vote");
 
                     let real_mail_1010 = rsa_key.decrypt(user_data_getted_from_session.na_10, 'utf8');//Decrypting Mail Id
                     url.searchParams.set('co', meet_code_op);//Stored Mail Id
@@ -311,7 +311,7 @@ app.post('/main_dashboard', (req, res) => {
 //Data Saved Part, Start
 app.get('/data_saved', (req, res) => {
     meet_code_op = req.query.gg;
-    let url = new URL("http://localhost/give_vote");
+    let url = new URL("https://vartvote.herokuapp.com/give_vote");
     let user_data_getted_from_session = req.session.auth_data; //Getting Data Which Stored In Session For Searching Collection Database
     if (user_data_getted_from_session != null) {
         url.searchParams.set('co', meet_code_op);//Stored Mail Id

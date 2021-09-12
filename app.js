@@ -18,7 +18,6 @@ const { devNull } = require('os');
 const nodemailer = require('nodemailer');//For Sending Mail
 //End
 
-
 // Some Variable And Declarations, Start
 
 let port = process.env.PORT || 80;
